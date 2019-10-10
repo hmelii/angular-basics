@@ -1,0 +1,17 @@
+.list { 
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid red;
+    flex-direction: column;
+    width: 370px;
+    height: 500px;
+    margin: auto;
+    justify-content: center;
+}
+
+.item {
+    background: red;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+}
