@@ -1,17 +1,16 @@
-.list { 
-    display: flex;
-    flex-wrap: wrap;
-    border: 1px solid red;
-    flex-direction: column;
-    width: 370px;
-    height: 500px;
+.container {
+    width: 460px;
     margin: auto;
-    justify-content: center;
 }
 
-.item {
+.red {
     background: red;
-    width: 150px;
-    height: 150px;
-    margin: 10px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.blue {
+    background: blue;
+    font-size: 1.5rem;
+    color: #fff;
 }
