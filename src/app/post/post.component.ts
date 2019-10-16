@@ -1,15 +1,20 @@
-import { Component, Input, OnInit, SimpleChanges, ContentChild, ElementRef, OnChanges, SimpleChange, DoCheck, AfterContentChecked, AfterContentInit, OnDestroy } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit, SimpleChanges, ContentChild, ElementRef, OnChanges, SimpleChange, DoCheck, AfterContentChecked, AfterContentInit, OnDestroy, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
 import { Post } from '../app.component';
 
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
-  styleUrls: ['./post.component.scss']
+  styleUrls: ['./post.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush, // если передать этот параметр, то ангулар не будет перерисовывать компонет если мы не заменим весь пост
+  encapsulation: ViewEncapsulation.None // отменяет инкапсулязию для стилей
 })
 export class PostComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, OnDestroy {
 
   @Input() post: Post
+  @Output() onRemove: EventEmitter<number> = new EventEmitter<number>()
+
   @ContentChild('info', { static: true }) infoRef: ElementRef
+  
 
   constructor() {
     console.log('constructor')
@@ -37,7 +42,7 @@ export class PostComponent implements OnInit, OnChanges, DoCheck, AfterContentIn
   }
 
   removePost() {
-    console.log(this.post)
+    this.onRemove.emit(this.post.id);
   }
 
 }
