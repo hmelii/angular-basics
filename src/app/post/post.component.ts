@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, SimpleChanges, ContentChild, ElementRef, OnChanges, SimpleChange, DoCheck, AfterContentChecked, AfterContentInit } from '@angular/core';
+import { Component, Input, OnInit, SimpleChanges, ContentChild, ElementRef, OnChanges, SimpleChange, DoCheck, AfterContentChecked, AfterContentInit, OnDestroy } from '@angular/core';
 import { Post } from '../app.component';
 
 @Component({
@@ -6,7 +6,7 @@ import { Post } from '../app.component';
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.scss']
 })
-export class PostComponent implements OnInit, OnChanges, DoCheck, AfterContentInit {
+export class PostComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, OnDestroy {
 
   @Input() post: Post
   @ContentChild('info', { static: true }) infoRef: ElementRef
@@ -30,6 +30,14 @@ export class PostComponent implements OnInit, OnChanges, DoCheck, AfterContentIn
 
   ngAfterContentInit():void {
     console.log('ngAfterContentInit')
+  }
+
+  ngOnDestroy():void {
+    console.log('ngOnDestroy')
+  }
+
+  removePost() {
+    console.log(this.post)
   }
 
 }

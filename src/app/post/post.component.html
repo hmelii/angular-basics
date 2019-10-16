@@ -2,4 +2,5 @@
     <h3>{{ post.title }}</h3>
     <p>{{ post.text }}</p>
     <ng-content></ng-content>
+    <button type="button" class="btn" (click)="removePost()">&times;</button>
 </div>
