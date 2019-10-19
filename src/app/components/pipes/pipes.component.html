@@ -1,0 +1,68 @@
+<div class="container">
+    <h1>Pipes</h1>
+
+    <p>{{ e | number }}</p>
+
+    <!--
+        1 - сколько цифр до запятой
+        1-5 - диапазон сколько цифр после запятой
+    -->
+    <p>{{ e | number:'1.1-5' }}</p> 
+
+    <p>{{ e | number:'1.0-0' }}</p> 
+
+
+    <!--
+        titlecase - делает каждое слово с большой буквы
+    -->
+    <p>{{ str | uppercase | lowercase | titlecase }}</p>
+
+    <!--
+        slice - обрезат слово до какой буквы и после какой
+    -->
+    <p>{{ str | titlecase | slice:1:5}}</p>
+
+    <p>{{ date | date:'dd MMMM yyyy, HH:mm'}}</p>
+
+    <p>{{ float  }}</p>
+
+    <p>{{ float | currency }}</p>
+
+    <p>{{ float | percent:'2.0-0' }}</p>
+
+    <pre>{{ obj | json }}</pre>
+
+
+    <!-- собственный pipe -->
+    <p>{{ 10 | multBy }}</p> 
+    <p>{{ 10 | multBy:2 }}</p>
+    <p>{{ 10 | multBy:3 }}</p>
+    <p>{{ 10 | multBy:4 }}</p>
+    <p>{{ 10 | multBy:5 }}</p>
+    <p>{{ 10 | multBy:6 }}</p>
+    <p>{{ 10 | multBy:7 }}</p>
+
+    <p>{{ '     Привет мир   ' | exMarks:'тест':'тест'}}</p>
+
+    <p><input type="text" [(ngModel)]="search" /></p>
+
+    <p>
+        <button type="button" (click)="searchFilter = 'title'">Search filter title</button>
+        <button type="button" (click)="searchFilter = 'text'">Search filter text</button>
+    </p>
+    <p>
+            <button type="button" (click)="addPost()">Add post</button>
+    </p>
+
+    <div class="card" *ngFor="let post of posts | filter: search: searchFilter">
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.text }}</p>
+    </div>
+
+
+    <p>Wait for it ... {{ promise | async }}</p>
+
+    <p>Date {{ date$ | async | date: 'HH:mm:ss' }}</p>
+
+    <p>Второй способ вывести асинхроно дату {{ date3 | date: 'HH:mm:ss'}}</p>
+</div>

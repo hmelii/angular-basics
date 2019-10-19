@@ -7,6 +7,11 @@ import {FormsModule} from '@angular/forms';
 import { PostFormComponent } from './post-form/post-form.component';
 import { PostComponent } from './post/post.component'
 import { StyleDirective } from './directives/style.directive';
+import { IfnotDirective } from './directives/ifnot.directive';
+import { PipesComponent } from './components/pipes/pipes.component';
+import { MultByPipe } from './pipes/mult-by.pipe';
+import { ExMarksPipe } from './pipes/ex-marks.pipe';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -14,6 +19,11 @@ import { StyleDirective } from './directives/style.directive';
     PostFormComponent,
     PostComponent,
     StyleDirective,
+    IfnotDirective,
+    PipesComponent,
+    MultByPipe,
+    ExMarksPipe,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

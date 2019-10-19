@@ -13,5 +13,31 @@
     </div>
   </app-post>
 
-  <div appStyle="red" fontWeight="bold">Тра ля ля</div>
+  <div appStyle="red" fontWeight="bold" [number]="10" [dStyle]="{fontStyle: 'italic', borderRadius: '50px', border: '1px solid red'}">Тра ля ля</div>
+
+  <div appStyle [fontSize]="'15px'" [dclassName]="'test'">Тра ля ля</div>
+
+  <p><button class="btn" (click)="isVisible = !isVisible">Toggle</button></p>
+
+  <ng-template [ngIf]="isVisible">
+    <div class="wrap">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat impedit rem provident? Omnis eum temporibus ipsa, eligendi necessitatibus dolores consequatur?</p>
+    </div>
+  </ng-template>
+
+
+
+    <div class="wrap" *appIfNot="!isVisible">
+      <p>2Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat impedit rem provident? Omnis eum temporibus ipsa, eligendi necessitatibus dolores consequatur?</p>
+    </div>  
+
+
+
+    <app-pipes></app-pipes>
+  <br/><br/><br/><br/><br/><br/>
+
+
+
+
+    
 </div>

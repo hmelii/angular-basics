@@ -12,6 +12,9 @@ export interface Post {
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+
+  isVisible = true
+  
   posts: Post[] = [
     {
       id: 1,
@@ -50,6 +53,8 @@ export class AppComponent implements OnInit {
     this.posts = this.posts.filter(item => item.id !== id);
     console.log(this.posts)
   }
+
+  
   
 
 }
