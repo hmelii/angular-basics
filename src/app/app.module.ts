@@ -12,6 +12,7 @@ import { PipesComponent } from './components/pipes/pipes.component';
 import { MultByPipe } from './pipes/mult-by.pipe';
 import { ExMarksPipe } from './pipes/ex-marks.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
+import { ServiceComponent } from './components/service/service.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FilterPipe } from './pipes/filter.pipe';
     PipesComponent,
     MultByPipe,
     ExMarksPipe,
-    FilterPipe
+    FilterPipe,
+    ServiceComponent
   ],
   imports: [
     BrowserModule,
