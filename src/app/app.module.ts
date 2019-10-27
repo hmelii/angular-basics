@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { PostFormComponent } from './post-form/post-form.component';
 import { PostComponent } from './post/post.component'
 import { StyleDirective } from './directives/style.directive';
@@ -13,6 +13,7 @@ import { MultByPipe } from './pipes/mult-by.pipe';
 import { ExMarksPipe } from './pipes/ex-marks.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
 import { ServiceComponent } from './components/service/service.component';
+import { FormsComponent } from './components/forms/forms.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +26,14 @@ import { ServiceComponent } from './components/service/service.component';
     MultByPipe,
     ExMarksPipe,
     FilterPipe,
-    ServiceComponent
+    ServiceComponent,
+    FormsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
