@@ -39,7 +39,16 @@
 
     <app-service></app-service> -->
 
-    <app-forms></app-forms>
+    <!-- <app-forms></app-forms> -->
+
+
+    <!-- своя ngModel -->
+    <app-switch [(ngModel)]="appState" (ngModelChange)="handleChange()"></app-switch>
+    <hr/>
+    <p>appState: {{appState}}</p>
+  <!--// своя ngModel -->
+
+
   <br/><br/><br/><br/><br/><br/>
 
 

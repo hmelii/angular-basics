@@ -14,6 +14,12 @@ export interface Post {
 export class AppComponent implements OnInit {
 
   isVisible = true
+
+  appState = 'off'
+
+  handleChange() {
+    console.log(this.appState)
+  }
   
   posts: Post[] = [
     {

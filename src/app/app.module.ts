@@ -14,6 +14,7 @@ import { ExMarksPipe } from './pipes/ex-marks.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
 import { ServiceComponent } from './components/service/service.component';
 import { FormsComponent } from './components/forms/forms.component';
+import { SwitchComponent } from './components/switch/switch.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { FormsComponent } from './components/forms/forms.component';
     ExMarksPipe,
     FilterPipe,
     ServiceComponent,
-    FormsComponent
+    FormsComponent,
+    SwitchComponent
   ],
   imports: [
     BrowserModule,
