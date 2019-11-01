@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Compoents</h1>
+  <h1>Components</h1>
   <!-- <app-post-form (onAdd)="updatePosts($event)"> </app-post-form>
   <hr />
   <app-post *ngFor="let post of posts" [post]="post" (onRemove)="removePost($event)">
@@ -43,11 +43,14 @@
 
 
     <!-- своя ngModel -->
-    <app-switch [(ngModel)]="appState" (ngModelChange)="handleChange()"></app-switch>
+    <!-- <app-switch [(ngModel)]="appState" (ngModelChange)="handleChange()"></app-switch>
     <hr/>
-    <p>appState: {{appState}}</p>
+    <p>appState: {{appState}}</p> -->
   <!--// своя ngModel -->
 
+  <!-- http client --->
+  <app-http-client></app-http-client>    
+  <!--// http client -->
 
   <br/><br/><br/><br/><br/><br/>
 

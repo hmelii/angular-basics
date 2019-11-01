@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http'
 import { AppComponent } from './app.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { PostFormComponent } from './post-form/post-form.component';
@@ -15,6 +16,7 @@ import { FilterPipe } from './pipes/filter.pipe';
 import { ServiceComponent } from './components/service/service.component';
 import { FormsComponent } from './components/forms/forms.component';
 import { SwitchComponent } from './components/switch/switch.component';
+import { HttpClientComponent } from './components/http-client/http-client.component';
 
 @NgModule({
   declarations: [
@@ -29,13 +31,15 @@ import { SwitchComponent } from './components/switch/switch.component';
     FilterPipe,
     ServiceComponent,
     FormsComponent,
-    SwitchComponent
+    SwitchComponent,
+    HttpClientComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
